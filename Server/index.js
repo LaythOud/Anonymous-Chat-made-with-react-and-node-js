@@ -211,7 +211,7 @@ wss.on('connection' , ws=>{
                         let check = addNewClient(messageObj.data[0] , ws )  
                         if(reg.test(messageObj.data[2])){
                             if(!isRoom(messageObj.data[2])){
-                                addNewRoom(messageObj.data[2] , messageObj.data[0] ,messageObj.data[1] , "none")
+                                addNewRoom(messageObj.data[2] , messageObj.data[0] ,messageObj.data[1] ,messageObj.data[3])
                             }else{
                                 addClientToRoom(messageObj.data[2] , messageObj.data[0])
                             }
@@ -222,6 +222,10 @@ wss.on('connection' , ws=>{
                         ws.send(JSON.stringify({type:'Set-Display' , data:messageObj.data[1]}))
                     }
                     break
+                case 'Refresh-Call':
+                        const fws = getFriendWS(ws)
+                        if(fws)fws.ws.send(JSON.stringify({type:'user-connected' , data:messageObj.data}))
+                        break
                  ///////////////////////////////////////////////////////////////
                 case 'Create-Room-Call':
                     if(reg.test(messageObj.data[0])){ // Creater ID Vaild

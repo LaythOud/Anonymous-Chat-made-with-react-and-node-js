@@ -9,10 +9,7 @@ export function usePeer(){
 
 export  function PeerProvider({children}) {
    
-    const myPeer = new Peer(undefined ,{
-        host:'/',
-        port:'3002'
-    })
+    const myPeer = new Peer(undefined )
 
     return (
         <PeerContext.Provider value={myPeer}>

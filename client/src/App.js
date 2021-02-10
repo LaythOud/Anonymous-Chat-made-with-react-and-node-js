@@ -30,6 +30,15 @@ export default function App() {
     window.sessionStorage.setItem("Anonymous-Chat-PeerID" , (peerID))
   } , [peerID])
 
+  useEffect(()=>{
+   if(socket.readyState === 1){
+      socket.send(JSON.stringify({
+        type:'Refresh-Call',
+        data:peerID
+      }))
+    }
+  }, [peerID])
+
   myPeer.on('open' , id=>{
 		setPeerID(id)
 	})
@@ -87,7 +96,7 @@ export default function App() {
         ]
     }))
   })
-  
+ 
 /* ///////////////////////////////////////////////////////////////// */
   return (
     <div className="App">
@@ -95,7 +104,7 @@ export default function App() {
       { display === "Message"?
           <Message socket={socket} ID={ID} setDisplay={setDisplay} roomID={roomID} chatLog={chatLog} setChatLog={setChatLog}/>:
           display === "Call"?
-           <Call myPeer={myPeer} setDisplay={setDisplay} ID={ID} socket={socket} roomID={roomID} />:
+           <Call peerID={peerID} myPeer={myPeer} setDisplay={setDisplay} ID={ID} socket={socket} roomID={roomID} />:
            display === "Info"?
             <Info socket={socket}/>:
             <Home socket={socket} peerID={peerID} ID={ID} setDisplay={setDisplay} /> 

@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
     "client": "cd ../client && npm start ",
-    "peer": "peerjs --port 3002",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run peer\" "
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "",
   "license": "ISC",

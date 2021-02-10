@@ -9,7 +9,6 @@ export default function Call(props) {
         }))
      }
 
-
     return( 
         <div className="Call">
             <button onClick={handleX} className="chat-exit fadeIn first">X</button>
