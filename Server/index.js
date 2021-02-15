@@ -200,6 +200,7 @@ wss.on('connection' , ws=>{
                         const newClientId = uuid.v4()
                         let check =  addNewClient(newClientId , ws)
                         ws.send(JSON.stringify({type:'Add-Success' , data:check}))
+                        ws.send(JSON.stringify({type:'Set-Display' , data:"Info"}))
                     }else{
                         ws.send(JSON.stringify({type:'Double-ID-Valid'}))
                     }

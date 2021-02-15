@@ -1,5 +1,4 @@
-///////////////////////////////////// Anonymous-Chat ///////////////////////////////////////////////
-
+# Anonymous-Chat 
 
 First you should have npm install on your device ,Then  move to **/Server** directory and run:
 

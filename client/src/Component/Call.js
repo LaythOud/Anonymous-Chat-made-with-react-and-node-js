@@ -16,8 +16,8 @@ export default function Call(props) {
                 <div id="formContent">
                     <h3 id="peerID" className="active fadeIn first" >{props.roomID}</h3>
                     <div className="fadeIn second" id="video-grid">
-                        <video id="me"></video>
                         <video id="friend"></video>
+                        <video id="me"></video>
                         <PeerJs  myPeer={props.myPeer} roomID={props.roomID} socket={props.socket} ID={props.ID} />
                    </div>
                 </div>
