@@ -55,7 +55,7 @@ export default function Home(props) {
           <input type="submit" onClick={handleGuest}  className="fadeIn fourth" value="Join Room"/>
        
         <div id="formFooter">
-          <a href="/"  onClick={e => handleInitRoom(e ,"Call")} className="underlineHover"><i className="fa fa-phone icon"></i></a>
+          <a href="/"  onClick={e => handleInitRoom(e ,"Call")} className="underlineHover"><i className="fa fa-video-camera icon"></i></a>
           <a href="/" onClick={e => handleInitRoom(e ,"Message")} className="underlineHover"><i className="fa fa-comments-o icon"></i></a>
           <a href="/" onClick={e => handleInitRoom(e ,"Info")} className="underlineHover"><i className="fa fa-info icon"></i></a>
         </div>

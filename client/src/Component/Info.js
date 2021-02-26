@@ -13,15 +13,15 @@ export default function Info(props) {
             <button onClick={handleX} className="chat-exit fadeIn first">X</button>
             <div className="wrapper fadeInDown">     
                 <div id="formContent"  >
-                    <h3 className="active fadeIn second" >Hello and thanks for using our app</h3>
+                    <h3 className="active fadeIn second" >Welcome to Anonymous Chat</h3>
                     <p className="fadeIn third">
-                        <b>How to use?</b>   <br/>
-                        1.click on icon in home page for start chating:<br/>
-                            i.<i className="fa fa-phone icon"></i> for phone call<br/>
-                            ii.<i className="fa fa-comments-o icon"></i>for message chat<br/>
-                        2.after step one you will see <b>something like this</b> on top of the page "c3e54330-95da-48bd-98ba-a34ed9cbb197" copy it and send it to your friend<br/><br/>
-                        3.one last thing, let your friend copy  "c3e54330-95da-48bd-98ba-a34ed9cbb197" and paste it in home page in <b>enter room id box</b> then click join and ready to go<br/><br/>
-                        easy right ^_^
+                        <b>How to use:</b>   <br/>
+                        1. Choose the type of chat by clicking:<br/>
+                            <i className="fa fa-video-camera icon"></i> for video chatting<br/>
+                            <i className="fa fa-comments-o icon"></i>for texting<br/>
+                        2. Now, an identifier like <b>"c3e54330-95da-48bd-98ba-a34ed9cbb197"</b> will appear at the top of the page, copy it and send it to your friend. <br/><br/>
+                        3. Finally, your friend should paste that same identifier in the <b>Enter Room ID</b> box at home page, then click <b>JOIN ROOM</b> button.<br/><br/>
+                        Enjoy ^_^
                     </p>
                 </div>
             </div>
