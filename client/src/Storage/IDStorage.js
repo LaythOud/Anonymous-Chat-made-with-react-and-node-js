@@ -1,3 +1,6 @@
+/*
+    modify local storage for user ID
+*/
 import {useEffect , useState} from 'react'
 
 const PREFIX = "Anonymous-Chat-"

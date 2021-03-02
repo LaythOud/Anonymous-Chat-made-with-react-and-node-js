@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function Home(props) {
   
+  // tell the server, that you are using the app
   const handleID = ()=>{
       props.socket.send(JSON.stringify({
         type:'Genrate-ID' ,
@@ -9,6 +10,7 @@ export default function Home(props) {
       }))
   }
 
+  // tell the  server to create a room
   const handleInitRoom =(e , value)=>{
        e.preventDefault()
        if(value === "Message"){
@@ -30,6 +32,7 @@ export default function Home(props) {
       }
   }
 
+ // here the server will male connection between you and your friend
   const handleGuest = ()=>{
     const roomID = document.getElementById('RoomID').value
     props.socket.send(JSON.stringify({

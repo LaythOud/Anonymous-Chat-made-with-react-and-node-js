@@ -1,3 +1,6 @@
+/*
+    modfiy session storage for one session  data
+*/
 import {useEffect , useState} from 'react'
 
 const PREFIX = "Anonymous-Chat-"

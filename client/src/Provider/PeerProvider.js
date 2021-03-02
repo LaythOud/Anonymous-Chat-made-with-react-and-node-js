@@ -1,3 +1,6 @@
+/*
+    provide components peer connection
+*/
 import React , { useContext } from 'react'
 import Peer from 'peerjs'
 

@@ -3,6 +3,7 @@ export default function PeerJs(props) {
 	
 	let myVideo = document.getElementById('me')
 
+	// respone to your friend call
 	props.myPeer.on('call' , call =>{
 		if(navigator.mediaDevices){
 			navigator.mediaDevices.getUserMedia({
@@ -36,6 +37,8 @@ export default function PeerJs(props) {
 	// 	}
 	// });
 
+
+	// here your friend will call you when he connect to the room
 	function connectToNewUser(userId) {
 		if(navigator.mediaDevices){
 			navigator.mediaDevices.getUserMedia({
